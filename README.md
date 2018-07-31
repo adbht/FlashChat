@@ -6,8 +6,8 @@
 ## About
 FlashChat is a live messaging application for iOS using Swift and Google’s Firebase database service for backend support on securely saving user accounts and their personal chats. So reinstallation or any future updates will result in no user data loss. To keep a clear structure on all the files, this application was designed and developed by implementing the Model View Controller (MVC) design pattern. 
 
-## Cocoapods
-This application was developed with the following 5 Cocoapods: 
+## CocoaPods
+This application was developed with the following 5 CocoaPods: 
    - Firebase
    - Firebase/Auth
    - Firebase/Database

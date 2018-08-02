@@ -24,9 +24,9 @@ This application was developed with the following 5 CocoaPods:
    - View
      - [Main.storyboard](https://github.com/adbht/FlashChat/blob/master/FlashChat/View/Main.storyboard)
      - [LaunchScreen.storyboard](https://github.com/adbht/FlashChat/blob/master/FlashChat/View/LaunchScreen.storyboard)
-     - CustomCell
-       - CustomMessageCell.swift
-       - MessageCell.xib
+     - [Custom Cell](https://github.com/adbht/FlashChat/tree/master/FlashChat/View/Custom%20Cell)
+       - [CustomMessageCell.swift](https://github.com/adbht/FlashChat/blob/master/FlashChat/View/Custom%20Cell/CustomMessageCell.swift)
+       - [MessageCell.xib](https://github.com/adbht/FlashChat/blob/master/FlashChat/View/Custom%20Cell/MessageCell.xib)
    - Controller
      - [AppDelegate.swift](https://github.com/adbht/FlashChat/blob/master/FlashChat/Controller/AppDelegate.swift)
      - [ChatViewController.swift](https://github.com/adbht/FlashChat/blob/master/FlashChat/Controller/ChatViewController.swift)

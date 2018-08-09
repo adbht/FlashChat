@@ -3,9 +3,9 @@
 ## Final Product
 <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/Updated%20FlashChat%20Cropped%20Video.mov" width="900" />
 
-<img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/1.%20Launch%20Screen_iphone8spacegrey_portrait.png" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/2.%20Welcome%20Screen_iphone8spacegrey_portrait.png" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/3.%20Register%20Screen_iphone8spacegrey_portrait.png" width="288" /> 
+<img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/1.%20Launch%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/2.%20Welcome%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/3.%20Register%20Screen.JPG" width="288" /> 
 
-<img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/4.%20Register%20Screen%202_iphone8spacegrey_portrait.png" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/5.%20Chat%20Screen_iphone8spacegrey_portrait.png" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/6.%20Log%20Out%20HUD_iphone8spacegrey_portrait.png" width="288" /> 
+<img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/4.%20Typing%20User%20Credentials.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/5.%20Chat%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/6.%20Logging%20Out.JPG" width="288" /> 
 
 ## About
 FlashChat is a live messaging application for iOS using Swift and Google’s Firebase database service for backend support on securely saving user accounts and their personal chats. So reinstallation or any future updates will result in no user data loss. To keep a clear structure on all the files, this application was designed and developed by implementing the Model View Controller (MVC) design pattern. 

@@ -1,7 +1,7 @@
 # FlashChat
 
 ## Final Product
-<img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/Updated%20FlashChat%20Cropped%20Video.mov" width="900" />
+<img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/FlashChat%20Video.mov" width="900" />
 
 <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/1.%20Launch%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/2.%20Welcome%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/3.%20Register%20Screen.JPG" width="288" /> 
 

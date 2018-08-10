@@ -24,6 +24,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        
         //Set this view controller as the delegate and datasource
         messageTableView.delegate = self
         messageTableView.dataSource = self

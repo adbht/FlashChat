@@ -30,7 +30,7 @@ class LogInViewController: UIViewController {
             if error != nil {
                 SVProgressHUD.showError(withStatus: "Incorrect email address or password. Please try again.")   //Display an error HUD if log in was unsuccessful. This can happen due reasons such as incorrect user credentials or no network connectivity.
             } else {
-                SVProgressHUD.dismiss()
+                SVProgressHUD.dismiss() //If the log in was successful, stop displaying the loading wheel as the application has accessed user's database
                 self.performSegue(withIdentifier: "goToChat", sender: self)
             }
         }

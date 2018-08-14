@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
             if error != nil {   
                 SVProgressHUD.showError(withStatus: "Registration failed")  //This is to display HUD to let user know that registration failed. This can be due to reasons such as email address only has an account or no  network connectivity.
             } else {
-                SVProgressHUD.dismiss()
+                SVProgressHUD.dismiss()     //If registration was successful, firstly the loading wheel needs to be stopped to let the uses know that the registration was completed
                 self.performSegue(withIdentifier: "goToChat", sender: self)
             }
         }

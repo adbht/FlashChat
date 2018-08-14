@@ -16,6 +16,18 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailTextfield: UITextField!          //Textfield where user inputs their email address
     @IBOutlet var passwordTextfield: UITextField!       //Textfield where user inputs their password
     
+    @IBAction func registerPressed(_ sender: AnyObject) {   //This function is executed when the user clicks on the Register button
+        SVProgressHUD.show()        //To display the loading animated wheel so the user knows that the application is trying to register the user in the database
+        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {    //This closure is used to check if the the user's inputted credentials satisfy Firebase's email and password criterias.
+            (user, error) in
+            if error != nil {   
+                SVProgressHUD.showError(withStatus: "Registration failed")  //This is to display HUD to let user know that registration failed. This can be due to reasons such as email address only has an account or no  network connectivity.
+            } else {
+                SVProgressHUD.dismiss()
+                self.performSegue(withIdentifier: "goToChat", sender: self)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +35,5 @@ class RegisterViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func registerPressed(_ sender: AnyObject) {
-        SVProgressHUD.show()
-        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
-            (user, error) in
-            if error != nil {
-                SVProgressHUD.showError(withStatus: "Registration failed")
-            } else {
-                SVProgressHUD.dismiss()
-                self.performSegue(withIdentifier: "goToChat", sender: self)
-            }
-        }
     }
 }

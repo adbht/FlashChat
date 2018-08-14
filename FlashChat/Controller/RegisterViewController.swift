@@ -11,9 +11,10 @@ import Firebase
 import SVProgressHUD
 
 class RegisterViewController: UIViewController {
-
-    @IBOutlet var emailTextfield: UITextField!
-    @IBOutlet var passwordTextfield: UITextField!
+    
+    //For users to input their new email addresses and password to register for a Firebase database
+    @IBOutlet var emailTextfield: UITextField!          //Textfield where user inputs their email address
+    @IBOutlet var passwordTextfield: UITextField!       //Textfield where user inputs their password
     
     
     override func viewDidLoad() {

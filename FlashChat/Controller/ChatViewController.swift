@@ -13,11 +13,11 @@ import ChameleonFramework
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    var messageArray = [Message]()
+    var messageArray = [Message]()      //Creating an object from the Message() Class
     
-    @IBOutlet var heightConstraint: NSLayoutConstraint!
-    @IBOutlet var sendButton: UIButton!
-    @IBOutlet var messageTextfield: UITextField!
+    @IBOutlet var heightConstraint: NSLayoutConstraint!     //This constraint is needed to bring up the TextField when it is clicked to create space for keyboard to be poppped
+    @IBOutlet var sendButton: UIButton!                     
+    @IBOutlet var messageTextfield: UITextField!    
     @IBOutlet var messageTableView: UITableView!
     
     

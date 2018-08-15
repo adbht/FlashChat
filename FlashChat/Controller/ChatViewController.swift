@@ -66,33 +66,31 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
-        cell.messageBody.text = messageArray[indexPath.row].messageBody
-        cell.senderUsername.text = senderCut(email: messageArray[indexPath.row].sender)
+        cell.messageBody.text = messageArray[indexPath.row].messageBody     //Assigning the message as the message obtained from the model class
+        cell.senderUsername.text = senderCut(email: messageArray[indexPath.row].sender) //Assigining the user label as the username received from the model class
         cell.senderUsername.textColor = UIColor.flatBlack()
-        if messageArray[indexPath.row].sender == Auth.auth().currentUser?.email {
-            cell.senderUsername.textAlignment = .right
+        if messageArray[indexPath.row].sender == Auth.auth().currentUser?.email {       //this if else statement is to assign different colors and text alignment to different users and distinguish the messages between users
+            cell.senderUsername.textAlignment = .right  //this is for the messages being composed by us
             cell.messageBody.textAlignment = .right
             cell.messageBody.textColor = UIColor.flatMint()
         } else {
-            cell.senderUsername.textAlignment = .left
+            cell.senderUsername.textAlignment = .left   //this is for the messages being received from the other user
             cell.messageBody.textAlignment = .left
             cell.messageBody.textColor = UIColor.flatTeal()
         }
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageArray.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {       //to declare the number of rows required in the table view to adequately fit messages
+        return messageArray.count       
     }
     
     func configureTableView() {
-        messageTableView.rowHeight = UITableViewAutomaticDimension
-        messageTableView.estimatedRowHeight = 120.0
+        messageTableView.rowHeight = UITableViewAutomaticDimension      //this is to automatically adjust the height of the cells in order to display the entire message
+        messageTableView.estimatedRowHeight = 120.0                     //defining an estimated row height in case needed
     }
 
-    //MARK:- TextField Delegate Methods
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {           //this function is called whenever the user clicks on the text field to compose a new message
         heightConstraint.constant = 308
         view.layoutIfNeeded()
     }

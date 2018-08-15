@@ -20,7 +20,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var messageTextfield: UITextField!    
     @IBOutlet var messageTableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -136,7 +135,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.scrollToBottom()
         }
     }
-    
     
     @IBAction func logOutPressed(_ sender: AnyObject) { //this function is called whenever the user taps on the Log out button
         

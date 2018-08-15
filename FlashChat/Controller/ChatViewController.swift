@@ -56,7 +56,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         return senderName
     }
     
-    //To display latest texts
+    //To automatically scroll down the table view whenever a new message appears. That way the user doesn't have to scroll down every time
     func scrollToBottom(){
         DispatchQueue.main.async {
             let indexPath = IndexPath(row: self.messageArray.count-1, section: 0)

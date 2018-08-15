@@ -91,21 +91,18 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {           //this function is called whenever the user clicks on the text field to compose a new message
-        heightConstraint.constant = 308
+        heightConstraint.constant = 308                                 //this is the necessary constraint to pull up the text field and leave just the right amount of space to house the keyboard underneath the text field 
         view.layoutIfNeeded()
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        heightConstraint.constant = 50
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {      //this function is called whenever user taps on the return button on the keyboard. in this case it is assigned to push down the keyboard to allow the user to read the chats
+        textField.resignFirstResponder()                                //to hide the keyboard upon clicking the 'return' button
+        heightConstraint.constant = 50                                  //redefining the constraint to send down the text field as the keyboard will now be hidden
         view.layoutIfNeeded()
         return true
     }
     
-    //MARK: - Send & Recieve from Firebase
-    
-    @IBAction func sendPressed(_ sender: AnyObject) {
-        
+    @IBAction func sendPressed(_ sender: AnyObject) {                   //this function is called whenever the send button is clicked
         sendButton.isEnabled = false
         
         //Send the message to Firebase and save it in our database

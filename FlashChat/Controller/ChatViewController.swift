@@ -107,20 +107,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //Send the message to Firebase and save it in our database
         let messagesDB = Database.database().reference().child("Messages")
-        let messageDictionary = ["Sender" : Auth.auth().currentUser?.email, "MessageBody": messageTextfield.text!]  //declaring who was the sender and what message they sent and uploading this to the Firebase database
+        let messageDictionary = ["Sender" : Auth.auth().currentUser?.email, "MessageBody": messageTextfield.text!]  //declaring who was the sender and what message they sent and uploading this to the Firebase database using a dictionary
         messagesDB.childByAutoId().setValue(messageDictionary) {
             (error, reference) in
             if error != nil {                                       
                 SVProgressHUD.showError(withStatus: "Error")        //In the case there was an error in sending the message, an error HUD will be popped up to let the user know their message was not delivered
             } else {
-                self.messageTextfield.isEnabled = true              //If the message was sent, firstly, the text field should be enabled 
+                self.messageTextfield.isEnabled = true              //if the message was sent, firstly, the text field should be enabled 
                 self.sendButton.isEnabled = true                    //the send button should also be enabled
                 self.messageTextfield.text = ""                     //finally the text field should be reset to no characters
             }
         }
     }
     
-    func retrieveMessages() {
+    func retrieveMessages() {       //this function is needed to pull all previous messages the user had sent or received
         let messageDB = Database.database().reference().child("Messages")
         messageDB.observe(.childAdded) { (snapshot) in
             let snapshotValue = snapshot.value as! [String : String]
@@ -138,15 +138,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    @IBAction func logOutPressed(_ sender: AnyObject) {
+    @IBAction func logOutPressed(_ sender: AnyObject) { //this function is called whenever the user taps on the Log out button
         
         //Log out the user and send them back to WelcomeViewController
         do {
-            try Auth.auth().signOut()
-            SVProgressHUD.showSuccess(withStatus: "Log out successful")
-            navigationController?.popViewController(animated: true)
+            try Auth.auth().signOut()       //to sign out the user
+            SVProgressHUD.showSuccess(withStatus: "Log out successful")  //if it was successful, the user will get an HUD indicating they were successfully logged out
+            navigationController?.popViewController(animated: true)     //this is to redirect the user to the screen they were on before entering the chat screen. So this could be the log in screen or the register screen
         } catch {
-            SVProgressHUD.showError(withStatus: "Log out failed")
+            SVProgressHUD.showError(withStatus: "Log out failed")       //else, display an HUD to indicate the user was not signed out
         }
     }
 }

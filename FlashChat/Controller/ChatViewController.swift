@@ -103,19 +103,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func sendPressed(_ sender: AnyObject) {                   //this function is called whenever the send button is clicked
-        sendButton.isEnabled = false
+        sendButton.isEnabled = false                                    //firstly, the send button needs to be disbaled to prevent the the user from sending the same message multiple times
         
         //Send the message to Firebase and save it in our database
         let messagesDB = Database.database().reference().child("Messages")
-        let messageDictionary = ["Sender" : Auth.auth().currentUser?.email, "MessageBody": messageTextfield.text!]
+        let messageDictionary = ["Sender" : Auth.auth().currentUser?.email, "MessageBody": messageTextfield.text!]  //declaring who was the sender and what message they sent and uploading this to the Firebase database
         messagesDB.childByAutoId().setValue(messageDictionary) {
             (error, reference) in
-            if error != nil {
-                SVProgressHUD.showError(withStatus: "Error")
+            if error != nil {                                       
+                SVProgressHUD.showError(withStatus: "Error")        //In the case there was an error in sending the message, an error HUD will be popped up to let the user know their message was not delivered
             } else {
-                self.messageTextfield.isEnabled = true
-                self.sendButton.isEnabled = true
-                self.messageTextfield.text = ""
+                self.messageTextfield.isEnabled = true              //If the message was sent, firstly, the text field should be enabled 
+                self.sendButton.isEnabled = true                    //the send button should also be enabled
+                self.messageTextfield.text = ""                     //finally the text field should be reset to no characters
             }
         }
     }

@@ -13,7 +13,7 @@ import ChameleonFramework
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    var messageArray = [Message]()      //Creating an object from the Message() Class
+    var messageArray = [Message]()                          //Creating an object from the Message() Class
     
     @IBOutlet var heightConstraint: NSLayoutConstraint!     //This constraint is needed to bring up the TextField when it is clicked to create space for keyboard to be poppped
     @IBOutlet var sendButton: UIButton!                     
@@ -121,10 +121,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func retrieveMessages() {       //this function is needed to pull all previous messages the user had sent or received
         let messageDB = Database.database().reference().child("Messages")
-        messageDB.observe(.childAdded) { (snapshot) in
-            let snapshotValue = snapshot.value as! [String : String]
-            let text = snapshotValue["MessageBody"]!
-            let sender = snapshotValue["Sender"]!
+        messageDB.observe(.childAdded) { (snapshot) in      //using this closure to extract the messages and their respective sender names
+            let snapshotValue = snapshot.value as! [String : String]    
+            let text = snapshotValue["MessageBody"]!        //extract messages and storing them as 'text' to store them in the message.messageBody
+            let sender = snapshotValue["Sender"]!           //extract sender names and storing them as 'sender' to store them message.sender
             
             let message = Message()
             message.messageBody = text

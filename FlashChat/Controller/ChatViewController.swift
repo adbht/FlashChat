@@ -129,10 +129,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let message = Message()
             message.messageBody = text                      //storing the messages received from the snapshot
             message.sender = sender                         //storing the sender name received from the snapshot 
-            self.messageArray.append(message)
-            self.configureTableView()
-            self.messageTableView.reloadData()
-            self.scrollToBottom()
+            self.messageArray.append(message)               //apending this new message dictionary to the model class
+            self.configureTableView()                       
+            self.messageTableView.reloadData()              //refreshing the table view to display the new messages as well
+            self.scrollToBottom()                           //finally, calling the scrollToBottom function so that the user can see all new messages
         }
     }
     

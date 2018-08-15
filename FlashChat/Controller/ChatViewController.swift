@@ -127,8 +127,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let sender = snapshotValue["Sender"]!           //extract sender names and storing them as 'sender' to store them message.sender
             
             let message = Message()
-            message.messageBody = text
-            message.sender = sender
+            message.messageBody = text                      //storing the messages received from the snapshot
+            message.sender = sender                         //storing the sender name received from the snapshot 
             self.messageArray.append(message)
             self.configureTableView()
             self.messageTableView.reloadData()

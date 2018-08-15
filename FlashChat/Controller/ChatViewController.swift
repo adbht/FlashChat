@@ -24,7 +24,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.setHidesBackButton(true, animated:true);
+        self.navigationItem.setHidesBackButton(true, animated:true);    //By default, there is a back button on the left of navigation bar which is redundant as there is a Log Out button. Hence this is needed to remove that back button.
         
         //Set this view controller as the delegate and datasource
         messageTableView.delegate = self
@@ -42,8 +42,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
-
-    //MARK: - TableView DataSource Methods
     
     //To cut the email addresses and print usernames to minimize clutter on the chat screen
     func senderCut (email : String) -> String {

@@ -3,7 +3,6 @@
 <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/Video.mov" width="900" />
 
 <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/1.%20Launch%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/2.%20Welcome%20Screen.JPG" width="288" /> <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/3.%20Register%20Screen.JPG" width="288" /> 
-
 <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/4.%20Typing%20User%20Credentials.JPG" width="288" />                                                                                                                   <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/5.%20Chat%20Screen.JPG" width="288" />       <img src="https://github.com/adbht/FlashChat/blob/master/Screenshots%20and%20Video/6.%20Logging%20Out.JPG" width="288" /> 
 
 ## About
